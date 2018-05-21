@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <script type="text/javascript" src="../js/mainController.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-custom navbar-expand-md fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" onclick="home()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="aboutMe()">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="projects()">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="blog()">Blog</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" onclick="contactMe()">Contact me</a>
+          </li>
+        </ul>
+      </div> 
+    </nav>
+
+    <div class="jumbotron cover-image">
+      <br/>
+      <br/>
+      <h1 onclick="aboutMe()">Nitin Kathpalia</h1>      
+      <p>A final year undergrad with a passion for technology</p>
+    </div>
+      
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron about-me" onclick="aboutMe()">
+          <h3 onclick="aboutMe()">About me</h3> 
+        </div>
+      </div>
+      <div class="col">
+        <div class="jumbotron projects" onclick="projects()">
+          <h3 onclick="projects()">Projects</h3> 
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron blog" onclick="blog()">
+          <h3 onclick="blog()">Blog</h3> 
+        </div>
+      </div>
+      <div class="col">
+        <div class="jumbotron contact-me" onclick="contactMe()">
+          <h3 onclick="contactMe()">Contact me</h3> 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

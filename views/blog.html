@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/blog.css">
+    <script type="text/javascript" src="../js/mainController.js"></script>
+    <script type="text/javascript" src="../js/blogController.js"></script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-custom navbar-expand-md fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" onclick="home()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="aboutMe()">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="projects()">Projects</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="blog()">Blog</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" onclick="contactMe()">Contact me</a>
+          </li>
+        </ul>
+      </div> 
+    </nav>
+
+    <div class="jumbotron cover-image">
+      <br/>
+      <br/>
+      <h1 onclick="blog()">Nitin's Blog</h1>      
+      <p>My passions, my views</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="blog-heading heading-1" onclick="show1()">
+          <br/>
+          <h4>Mapbot</h4> 
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="blog-heading" onclick="show2()">
+          <br/>
+          <h4>Genetic Algorithm</h4> 
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="blog-heading" onclick="show3()">
+          <br/>
+          <h4>Coming Soon!</h4> 
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="blog-heading" onclick="show4()">
+          <br/>
+          <h4>Coming Soon!</h4> 
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-left:auto;margin-right:auto;">
+      <div id="blog1" class="blog" style="display: none">
+        <h3>Being the runner up in my first ever Hackathon</h3>
+        <p>
+          I recently Participated in one of the Hackathons at Vellore Institute of Technology. After, 36 hours of intense 
+          brainstorming sessions, planning, coding and preparations we came up with an interesting product and pitched it to the 
+          judges/investors. We were adjudged runners up due to our innovative idea and stellar technological expertise. 
+        </p>
+        <p><a onclick="blog1open()" style="cursor: pointer;"><u>Read more</u></a></p>
+      </div>
+      <div id="blog2" class="blog" style="display: none">
+        <h3>Genetic Algorithm</h3>
+        <br/>
+        A visualisation of Genetic Algorithm created using Javascript.                                                                                                                                                              .
+        <p><a onclick="blog2open()" style="cursor: pointer;"><u>Read more</u></a></p>
+      </div>
+      <div id="blog3" class="blog" style="display: none">
+        <h3>Blog 3 Content</h3>
+        <br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div id="blog4" class="blog" style="display: none">
+        <h3>Blog 4 Content</h3>
+        <br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="blog-heading" onclick="show5()">
+          <br/>
+          <h4>Coming Soon!</h4> 
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="blog-heading" onclick="show6()">
+          <br/>
+          <h4>Coming Soon!</h4> 
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="blog-heading" onclick="show7()">
+          <br/>
+          <h4>Coming Soon!</h4> 
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="blog-heading" onclick="show8()">
+          <br/>
+          <h4>Coming Soon!</h4> 
+        </div>
+      </div>
+    </div>
+    <div class="row" style="margin-left:auto;margin-right:auto;">
+      <div id="blog5" class="blog" style="display: none">
+        <h3>Blog 5 Content</h3>
+        <br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div id="blog6" class="blog" style="display: none">
+        <h3>Blog 6 Content</h3>
+        <br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div id="blog7" class="blog" style="display: none">
+        <h3>Blog 7 Content</h3>
+        <br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div id="blog8" class="blog" style="display: none">
+        <h3>Blog 8 Content</h3>
+        <br/>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+    </div>  
+    
+  </body>
+</html>

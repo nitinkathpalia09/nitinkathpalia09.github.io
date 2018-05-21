@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="geneticAlgorithm.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/blog.css">
+    <script type="text/javascript" src="../js/mainController.js"></script>
+  </head>
+
+  <body onload="draw();">
+
+  <nav class="navbar navbar-custom navbar-expand-md fixed-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" onclick="home()">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="aboutMe()">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="projects()">Projects</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" onclick="blog()">Blog</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" onclick="contactMe()">Contact me</a>
+          </li>
+        </ul>
+      </div> 
+    </nav>
+<br/>
+<br/>
+<br/>
+<br/>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-4" style="text-align: right;">
+          <button id="select" type="button" class="btn btn-primary" onclick="selection()">Selection</button>
+        </div>
+        
+        <div class="col-lg-8" style="text-align: center;">
+          <div id="crossoverPointSelectPanel" style="display: none;">
+            <button type="button" class="btn btn-secondary" disabled style="width:30px; height:30px;">G<sub>0</sub></button>
+            <button type="button" class="btn btn-primary" style="padding-left:0px; height:30px;" onclick="crossover(1)"></button>
+            <button type="button" class="btn btn-secondary" disabled style="width:30px; height:30px;">G<sub>1</sub></button>
+            <button type="button" class="btn btn-primary" style="padding-left:0px; height:30px;" onclick="crossover(2)"></button>
+            <button type="button" class="btn btn-secondary" disabled style="width:30px; height:30px;">G<sub>2</sub></button>
+            <button type="button" class="btn btn-primary" style="padding-left:0px; height:30px;" onclick="crossover(3)"></button>
+            <button type="button" class="btn btn-secondary" disabled style="width:30px; height:30px;">G<sub>3</sub></button>
+            <button type="button" class="btn btn-primary" style="padding-left:0px; height:30px;" onclick="crossover(4)"></button>
+            <button type="button" class="btn btn-secondary" disabled style="width:30px; height:30px;">G<sub>4</sub></button>
+            <button type="button" class="btn btn-primary" style="padding-left:0px; height:30px;" onclick="crossover(5)"></button>
+            <button type="button" class="btn btn-secondary" disabled style="width:30px; height:30px;">G<sub>5</sub></button>
+            <br/>
+            <div id="rightHeading"></div>
+          </div>
+
+          <div id="mutationPointSelectPanel" style="display: none;">
+            <button type="button" class="btn btn-secondary" style="width:30px; height:30px;" onclick="mutation(0)">G<sub>0</sub></button>
+            <button type="button" class="btn btn-secondary" style="width:30px; height:30px;" onclick="mutation(1)">G<sub>1</sub></button>
+            <button type="button" class="btn btn-secondary" style="width:30px; height:30px;" onclick="mutation(2)">G<sub>2</sub></button>
+            <button type="button" class="btn btn-secondary" style="width:30px; height:30px;" onclick="mutation(3)">G<sub>3</sub></button>
+            <button type="button" class="btn btn-secondary" style="width:30px; height:30px;" onclick="mutation(4)">G<sub>4</sub></button>
+            <button type="button" class="btn btn-secondary" style="width:30px; height:30px;" onclick="mutation(5)">G<sub>5</sub></button>
+            <br/>
+          </div>
+
+          <div id="fitnessEvaluation" style="display: none;">
+            <button type="button" class="btn btn-primary" onclick="">Evaluate fittest entities</button>
+            <br/>
+          </div>
+        </div>
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+      </div>
+      
+      <div class="row">
+        
+        <div class="col-lg-5" style="text-align: center">
+          <canvas id="entity10" width="30px" height="30px"></canvas>
+          <canvas id="entity11" width="30px" height="30px"></canvas>
+          <canvas id="entity12" width="30px" height="30px"></canvas>
+          <canvas id="entity13" width="30px" height="30px"></canvas>
+          <canvas id="entity14" width="30px" height="30px"></canvas>
+          <canvas id="entity15" width="30px" height="30px"></canvas>
+          <canvas id="entity16" width="30px" height="30px"></canvas>
+          <canvas id="entity17" width="30px" height="30px"></canvas>
+          <canvas id="entity18" width="30px" height="30px"></canvas>
+          <canvas id="entity19" width="30px" height="30px"></canvas>
+        </div>
+        
+        <div class="col-lg-2" style="text-align: left;">
+          
+          <canvas id="pair0" width="30px" height="30px"></canvas>
+          <label id="hex0"></label> 
+          <br/>
+          <canvas id="pair1" width="30px" height="30px"></canvas>
+          <label id="hex1"></label>
+          
+          <br/><br/>
+          <canvas id="pair2" width="30px" height="30px"></canvas>
+          <label id="hex2"></label>
+          <br/>
+          <canvas id="pair3" width="30px" height="30px"></canvas>
+          <label id="hex3"></label>
+          
+          <br/><br/>
+          <canvas id="pair4" width="30px" height="30px"></canvas>
+          <label id="hex4"></label>
+          <br/>
+          <canvas id="pair5" width="30px" height="30px"></canvas>
+          <label id="hex5"></label>
+         
+          <br/><br/>
+          <canvas id="pair6" width="30px" height="30px"></canvas>
+          <label id="hex6"></label>
+          <br/>
+          <canvas id="pair7" width="30px" height="30px"></canvas>
+          <label id="hex7"></label>
+          
+          <br/><br/>
+          <canvas id="pair8" width="30px" height="30px"></canvas>
+          <label id="hex8"></label>
+          <br/>
+          <canvas id="pair9" width="30px" height="30px"></canvas>
+          <label id="hex9"></label>
+          
+        </div>
+        
+        <div class="col-lg-5" style="text-align: left;">
+          <br/>
+          <canvas id="newOffspring0" width="30px" height="30px"></canvas>
+          <label id="newHex0"></label>
+          <br/><br/><br/><br/>
+          <canvas id="newOffspring1" width="30px" height="30px"></canvas>
+          <label id="newHex1"></label>
+          <br/><br/><br/><br/>
+          <canvas id="newOffspring2" width="30px" height="30px"></canvas>
+          <label id="newHex2"></label>
+          <br/><br/><br/><br/>
+          <canvas id="newOffspring3" width="30px" height="30px"></canvas>
+          <label id="newHex3"></label>
+          <br/><br/><br/><br/>
+          <canvas id="newOffspring4" width="30px" height="30px"></canvas>
+          <label id="newHex4"></label>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-5" style="text-align: center">
+          <canvas id="entity20" width="30px" height="30px"></canvas>
+          <canvas id="entity21" width="30px" height="30px"></canvas>
+          <canvas id="entity22" width="30px" height="30px"></canvas>
+          <canvas id="entity23" width="30px" height="30px"></canvas>
+          <canvas id="entity24" width="30px" height="30px"></canvas>
+          <canvas id="entity25" width="30px" height="30px"></canvas>
+          <canvas id="entity26" width="30px" height="30px"></canvas>
+          <canvas id="entity27" width="30px" height="30px"></canvas>
+          <canvas id="entity28" width="30px" height="30px"></canvas>
+          <canvas id="entity29" width="30px" height="30px"></canvas>
+        </div>
+      </div>
+    </div>
+         
+  </body>
+</html>
