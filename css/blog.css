@@ -84,6 +84,30 @@
     background-size: cover;
     min-height: 200px;
 }
+.heading-5{
+	background: url(../image/blog/image-5.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+}
+.heading-6{
+	background: url(../image/blog/image-6.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+}
+.heading-7{
+	background: url(../image/blog/image-7.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+}
+.heading-8{
+	background: url(../image/blog/image-8.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 200px;
+}
 
 .heading-1:hover{
 	background: url(../image/blog/image-1.jpg);

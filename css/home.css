@@ -54,7 +54,7 @@
     min-height: 300px;
     cursor: pointer;
 }
-.about-me:hove{
+.about-me:hover{
 	background: url(../image/image-4.jpg);
 	background-repeat: no-repeat;
     background-size: cover;
